@@ -10,15 +10,15 @@ This project connects directly to Mahmoud Alqudah's prior research on IEEE 802.1
 
 For beacon-enabled operation, the simulator uses the common superframe relationships
 
-[
+$
 BI = aBaseSuperframeDuration \cdot 2^{BO}
-]
+$
 
 and
 
-[
+$
 SD = aBaseSuperframeDuration \cdot 2^{SO},
-]
+$
 
 with `aBaseSuperframeDuration = 960` symbols.
 
@@ -26,9 +26,9 @@ At 2.4 GHz PHY symbol rate (62.5 ksymbol/s), the base superframe duration is 15.
 
 The active duty cycle is
 
-[
+$
 \frac{SD}{BI}=2^{SO-BO}.
-]
+$
 
 The implementation validates `0 <= SO <= BO <= 14`.
 
