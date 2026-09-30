@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-
 A_BASE_SUPERFRAME_DURATION_SYMBOLS = 960
 A_NUM_SUPERFRAME_SLOTS = 16
 DEFAULT_SYMBOL_RATE = 62_500.0
