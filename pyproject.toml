@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ieee802154-simulator"
+version = "0.1.0"
+description = "Beacon-enabled IEEE 802.15.4 superframe and contention simulator for research experiments."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Mahmoud Alqudah"}]
+dependencies = ["numpy>=2,<3"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.9,<4"]
+dev = ["pytest>=8,<10", "ruff>=0.8,<1"]
+
+[project.scripts]
+ieee802154-sim = "ieee802154.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
